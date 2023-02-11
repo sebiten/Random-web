@@ -1,4 +1,5 @@
 import NavBar from '@/components/NavBar'
+import RandomImageComponent from '@/components/RandomImage'
 import RandomQuote from '@/components/Randomquote'
 import Head from 'next/head'
 
@@ -15,6 +16,7 @@ export default function Home() {
       <div>
         <NavBar/>
         <RandomQuote/>
+        <RandomImageComponent/>
       </div>
     </>
   )
