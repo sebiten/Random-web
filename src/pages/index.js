@@ -2,7 +2,13 @@ import NavBar from '@/components/NavBar'
 import RandomImageComponent from '@/components/RandomImage'
 import RandomQuote from '@/components/Randomquote'
 import Head from 'next/head'
+import MusicPlayer from '@/components/MusicPlayer'
 
+const trackList = [
+  { title: 'Track 1', src: '/carlcox.mp3', title: 'carl cox melbourne', srcImg:'/favicon.ico' },
+  { title: 'Track 2', src: '/carlcox.mp3' },
+  { title: 'Track 3', src: '/carlcox.mp3' },
+];
 
 export default function Home() {
   return (
@@ -15,8 +21,9 @@ export default function Home() {
       </Head>
       <div>
         <NavBar/>
-        <RandomQuote/>
         <RandomImageComponent/>
+        <RandomQuote/>
+        <MusicPlayer trackList={trackList}/>
       </div>
     </>
   )
