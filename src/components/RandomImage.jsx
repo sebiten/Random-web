@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import React, { useState } from 'react';
+import Image from "next/image";
+import React, { useState } from "react";
 
 const RandomImageComponent = () => {
   const images = [
@@ -17,17 +17,25 @@ const RandomImageComponent = () => {
     setSelectedImage(images[randomIndex]);
   };
 
-
   return (
-    <div className='bg-gray-500 flex flex-col gap-5 justify-center mx-auto'>
-      <Image 
-      width={700}
-      height={700}
-      src={`/${selectedImage}`} 
-      className='w-1/2 mx-auto'
-      alt="Random Image" />
-      <button
-      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-auto" onClick={handleClick}>Show Another Image</button>
+    <div className="mt-5">
+      <div>
+        <Image
+          width={700}
+          height={700}
+          src={`/${selectedImage}`}
+          className="mx-auto w-[500px] h-[400px] rounded-xl"
+          alt="Random Image"
+        />
+      </div>
+      <div>
+        <button
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-auto mt-2"
+          onClick={handleClick}
+        >
+          Click
+        </button>
+      </div>
     </div>
   );
 };

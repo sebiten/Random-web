@@ -4,19 +4,16 @@ const MusicPlayer = ({ trackList }) => {
   const [currentTrack, setCurrentTrack] = useState(trackList[0]);
 
   return (
-    <div className="bg-black text-white mx-auto">
-      <div className="w-1/2 mx-auto">
-        <h3>{currentTrack.title}</h3>
-        <audio src={currentTrack.src} controls />
+    <div className=" text-white mx-auto mt-4 ">
+      <div className=" mx-auto my-auto">
+        <h3 className="font-bold uppercase">{currentTrack.title}</h3>
+        <audio className="my-2" src={currentTrack.src} controls />
         <ul className="text-white flex gap-5">
           {trackList.map((track, index) => (
             <li key={track.src}>
               <button
-              className="text-center"
+              className="text-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded"
               onClick={() => setCurrentTrack(track)}>
-                <img
-                className="w-[55px]"
-                src={track.srcImg} alt={track.title} />
                 {track.title}
               </button>
             </li>

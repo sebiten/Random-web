@@ -1,13 +1,13 @@
-import NavBar from '@/components/NavBar'
-import RandomImageComponent from '@/components/RandomImage'
-import RandomQuote from '@/components/Randomquote'
-import Head from 'next/head'
-import MusicPlayer from '@/components/MusicPlayer'
+import NavBar from "@/components/NavBar";
+import RandomImageComponent from "@/components/RandomImage";
+import RandomQuote from "@/components/Randomquote";
+import Head from "next/head";
+import MusicPlayer from "@/components/MusicPlayer";
 
 const trackList = [
-  { title: 'Track 1', src: '/carlcox.mp3', title: 'carl cox melbourne', srcImg:'/favicon.ico' },
-  { title: 'Track 2', src: '/carlcox.mp3' },
-  { title: 'Track 3', src: '/carlcox.mp3' },
+  { title: "Track 1", src: "/carlcox.mp3" },
+  { title: "Track 2", src: "/carlcox.mp3" },
+  { title: "Track 3", src: "/carlcox.mp3" },
 ];
 
 export default function Home() {
@@ -19,12 +19,14 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <NavBar />
       <div>
-        <NavBar/>
-        <RandomImageComponent/>
-        <RandomQuote/>
-        <MusicPlayer trackList={trackList}/>
+        <RandomQuote />
+        <div className="flex w-1/2 mx-auto">
+          <RandomImageComponent />
+          <MusicPlayer trackList={trackList} />
+        </div>
       </div>
     </>
-  )
+  );
 }

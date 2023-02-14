@@ -31,7 +31,7 @@ const RandomQuote = () => {
   };
 
   return (
-    <div className="p-4 bg-gray-200 rounded-lg">
+    <div className="p-4 bg-[conic-gradient(at_right,_var(--tw-gradient-stops))] from-indigo-200 via-slate-400 to-indigo-100 w-1/2 mx-auto mt-3 rounded-xl">
       <p className="text-gray-800 font-bold text-2xl">"{quotes[selectedQuote].quote}"</p>
       <p className="text-gray-600 text-right">- {quotes[selectedQuote].author}</p>
       <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={handleClick}>
